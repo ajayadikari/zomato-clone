@@ -21,4 +21,7 @@ for(let i = 0; i<40; i++){
         ele.innerHTML += `${icon}`;
         countriesCont.append(ele);
     }
+    ele.addEventListener("click", ()=>{
+        window.location.href = "restaurant-page/restaurant-page.html";
+    })
 }
