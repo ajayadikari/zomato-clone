@@ -110,3 +110,30 @@ for(let i = 0; i<15; i++){
     eachItem.append(detBox);
     restItems.append(eachItem);
 }
+
+
+// for footer 
+
+// location box popup 
+const locBtn = document.querySelector(".locations-btn");
+console.log("working ");
+const locBox = document.querySelector(".loc-box");
+locBox.classList.add("disable");
+let locOn = false;
+for (let i = 0; i < 24; i++) {
+    const subBox = document.createElement("div");
+    subBox.classList.add("sub-box");
+    const imgEle = document.createElement("img");
+    imgEle.src = '../images/indian-flag.png';
+    subBox.append(imgEle);
+    const p = document.createElement("p");
+    p.innerHTML = `India`;
+    subBox.append(p);
+    locBox.append(subBox);
+}
+
+locBtn.addEventListener("click", () => {
+    if(locOn) locOn = false;
+    else locOn = true;
+    locBox.classList.toggle("disable");
+})
