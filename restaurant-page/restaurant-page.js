@@ -137,3 +137,38 @@ locBtn.addEventListener("click", () => {
     else locOn = true;
     locBox.classList.toggle("disable");
 })
+
+
+
+// q and a section dropdown elements
+
+let qandaCont = document.querySelector(".qanda-cont");
+for(let i = 0; i<4; i++){
+    const ele = document.createElement("div");
+    ele.classList.add("element");
+
+    const ques = document.createElement("div");
+    ques.classList.add("ques");
+    const q = document.createElement("p");
+    q.innerHTML = `Popular cuisines near me`;
+    ques.append(q);
+    const icon = document.createElement("i");
+    icon.classList.add("fa-solid", "fa-angle-down");
+    const iconEle = document.createElement("div");
+    iconEle.append(icon);
+    ques.append(iconEle);
+    ele.append(ques);
+    const ans = document.createElement("div");
+    ans.classList.add("ans");
+    ans.classList.add("drop-up");
+    ans.innerHTML = `Bakery food near meBeverages food near meBiryani food near meBurger food near meChinese food near meCoffee food near meContinental food near meDesserts food near meGujarati food near meIce Cream food near meItalian food near meMughlai food near meNorth Indian food near mePasta food near mePizza food near meSandwich food near meShake food near meSichuan food near meSouth Indian food near meStreet food near me`;
+    ele.append(ans);
+    ele.addEventListener("click", ()=>{
+        ans.classList.toggle("drop-up");
+        icon.classList.toggle("rotate");
+    })
+    qandaCont.append(ele);
+}
+
+
+
